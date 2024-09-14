@@ -1,3 +1,4 @@
+<app-header (searchQueryEmit)="searchQueryChange($event)" (sortQueryEmit)="sortQueryChange($event)"></app-header>
 <div class="grid-container">
   <ng-container *ngFor="let item of (products$ | async)">
     <app-product [product]="item"></app-product>

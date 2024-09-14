@@ -1,1 +1,18 @@
-<p>header works!</p>
+<div class="header search-sort-container">
+  <!-- Search Bar -->
+  <mat-form-field appearance="outline" class="search-bar">
+    <mat-icon matPrefix>search</mat-icon>
+    <input matInput placeholder="Search" [(ngModel)]="searchQuery" (input)="onSearch()" />
+  </mat-form-field>
+
+  <!-- Sort Dropdown -->
+  <mat-form-field appearance="outline" class="sort-bar">
+    <mat-label>Sort By</mat-label>
+    <mat-select [(ngModel)]="sortOption" (selectionChange)="onSortChange()">
+      <mat-option value="name">Name</mat-option>
+      <mat-option value="priceAsc">Price: Low to High</mat-option>
+      <mat-option value="priceDesc">Price: High to Low</mat-option>
+    </mat-select>
+    <mat-icon matSuffix>sort</mat-icon>
+  </mat-form-field>
+</div>

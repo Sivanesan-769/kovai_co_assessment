@@ -3,6 +3,9 @@
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 20px;
   padding: 20px;
+  position: absolute;
+  width: 95%;
+  margin-top: 50px;
 }
 
 @media (min-width: 600px) {
