@@ -13,11 +13,15 @@ export class HeaderComponent {
   @Output() sortQueryEmit = new EventEmitter<string>();
 
   onSearch(): void {
-    this.searchQueryEmit.emit(this.searchQuery);
+    setTimeout(() => {
+      this.searchQueryEmit.emit(this.searchQuery);
+    }, 1000)
   }
 
   onSortChange(): void {
-    this.sortQueryEmit.emit(this.sortOption);
+    setTimeout(() => {
+      this.sortQueryEmit.emit(this.sortOption);
+    }, 1000)
   }
 
 }
