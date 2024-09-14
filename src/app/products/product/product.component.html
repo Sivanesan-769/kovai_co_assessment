@@ -3,6 +3,6 @@
   <div class="product-info">
     <h2 class="product-title" title="{{product.title}}">{{product.title}}</h2>
     <p class="product-price">{{product.price | currency:'USD':'symbol':'1.2-2'}}</p>
-    <button class="buy-button">Buy Now</button>
+    <button class="buy-button" [routerLink]="['/about']" [queryParams]="{ data: serializedProduct(product) }">About product</button>
   </div>
 </div>

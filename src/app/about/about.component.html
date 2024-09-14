@@ -1,1 +1,14 @@
-<p>about works!</p>
+<div class="product-detail-container">
+  <button (click)="goBack()" class="back-button">Back to Products</button>
+  <div class="product-image">
+    <img [src]="product?.image" alt="{{ product?.title }}" />
+  </div>
+  <div class="product-info">
+    <h1>{{ product?.title }}</h1>
+    <p class="product-price">{{ product?.price | currency }}</p>
+    <p class="product-description">{{ product?.description }}</p>
+    <div class="product-rating">
+      <span>Rating: {{ product?.rating?.rate }} ({{ product?.rating?.count }} reviews)</span>
+    </div>
+  </div>
+</div>
